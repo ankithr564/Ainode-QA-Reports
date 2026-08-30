@@ -214,7 +214,7 @@
         <div class="logo-badge">API</div>
         <div>
           <h1>AiNode Backend API — Executive Test Report</h1>
-          <div class="subtitle">Generated: August 30, 2026 - 10:10 PM • Framework: Pytest Python</div>
+          <div class="subtitle">Generated: August 30, 2026 - 10:17 PM • Framework: Pytest Python</div>
         </div>
       </div>
       <div>
@@ -228,36 +228,36 @@
           <span class="metric-label">Total Test Cases</span>
           <span>⚡</span>
         </div>
-        <div class="metric-value text-accent">5</div>
+        <div class="metric-value text-accent">27</div>
       </div>
       <div class="metric-card passed">
         <div class="metric-header">
           <span class="metric-label">Passed Tests</span>
           <span>✅</span>
         </div>
-        <div class="metric-value text-pass">5</div>
+        <div class="metric-value text-pass">26</div>
       </div>
       <div class="metric-card failed">
         <div class="metric-header">
           <span class="metric-label">Failed Tests</span>
           <span>❌</span>
         </div>
-        <div class="metric-value text-fail">0</div>
+        <div class="metric-value text-fail">1</div>
       </div>
       <div class="metric-card passrate">
         <div class="metric-header">
           <span class="metric-label">Pass Rate</span>
           <span>📈</span>
         </div>
-        <div class="metric-value text-pass">100.0%</div>
+        <div class="metric-value text-fail">96.3%</div>
       </div>
     </div>
 
     <div class="toolbar">
       <div class="filter-tabs">
-        <button class="tab-btn active" onclick="filterStatus('all', this)">All (5)</button>
-        <button class="tab-btn" onclick="filterStatus('passed', this)">✅ Passed (5)</button>
-        <button class="tab-btn" onclick="filterStatus('failed', this)">❌ Failed (0)</button>
+        <button class="tab-btn active" onclick="filterStatus('all', this)">All (27)</button>
+        <button class="tab-btn" onclick="filterStatus('passed', this)">✅ Passed (26)</button>
+        <button class="tab-btn" onclick="filterStatus('failed', this)">❌ Failed (1)</button>
         
       </div>
       <div class="search-box">
@@ -273,180 +273,304 @@
             <div class="service-header">
               <div class="service-title-container">
                 <h3 class="service-name">⚙️ Auth Service</h3>
-                <span class="badge badge-pass">100% Passed</span>
+                <span class="badge badge-fail">❌ 1 Failed</span>
               </div>
               <div class="service-stats-summary">
-                <span class="stat-pill pass-pill">✅ 1 Passed</span>
-                <span class="stat-pill fail-pill">❌ 0 Failed</span>
+                <span class="stat-pill pass-pill">✅ 26 Passed</span>
+                <span class="stat-pill fail-pill">❌ 1 Failed</span>
                 
-                <span class="stat-pill duration-pill">⏱️ 0.5s</span>
+                <span class="stat-pill duration-pill">⏱️ 35.8s</span>
               </div>
             </div>
             
             <div class="progress-bar-container">
-              <div class="progress-bar bar-pass" style="width: 100.0%;"></div>
+              <div class="progress-bar bar-fail" style="width: 96.3%;"></div>
             </div>
-            <div class="pass-rate-label">100.0% Pass Rate (1/1 tests)</div>
+            <div class="pass-rate-label">96.3% Pass Rate (26/27 tests)</div>
 
             <details class="test-details" open>
-              <summary>View Service Endpoints & Test Cases (1 total)</summary>
+              <summary>View Service Endpoints & Test Cases (27 total)</summary>
               <div class="test-list">
                 
-              <div class="test-row status-passed" data-status="passed" data-title="test_login_user_p0">
+              <div class="test-row status-passed" data-status="passed" data-title="test_auth_docs">
                 <div class="test-info">
                   <span class="test-badge pass">PASS</span>
-                  <span class="test-title">test_login_user_p0</span>
-                  <span class="marker-tag">p0</span><span class="marker-tag">api</span>
+                  <span class="test-title">test_auth_docs</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 1.64s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_register_user">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_register_user</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 0.91s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_login">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_login</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 0.63s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_p1_register_empty_payload">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_p1_register_empty_payload</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 4.14s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_p1_register_missing_email">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_p1_register_missing_email</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 0.66s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_p1_register_missing_password">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_p1_register_missing_password</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 0.68s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_p1_register_invalid_email_format">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_p1_register_invalid_email_format</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 2.77s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_p1_register_duplicate_email">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_p1_register_duplicate_email</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
                 </div>
                 <div class="test-duration">⏱️ 0.45s</div>
               </div>
               
             
-              </div>
-            </details>
-          </div>
-        
-          <div class="service-card" data-service="courses service">
-            <div class="service-header">
-              <div class="service-title-container">
-                <h3 class="service-name">⚙️ Courses Service</h3>
-                <span class="badge badge-pass">100% Passed</span>
-              </div>
-              <div class="service-stats-summary">
-                <span class="stat-pill pass-pill">✅ 1 Passed</span>
-                <span class="stat-pill fail-pill">❌ 0 Failed</span>
-                
-                <span class="stat-pill duration-pill">⏱️ 0.6s</span>
-              </div>
-            </div>
-            
-            <div class="progress-bar-container">
-              <div class="progress-bar bar-pass" style="width: 100.0%;"></div>
-            </div>
-            <div class="pass-rate-label">100.0% Pass Rate (1/1 tests)</div>
-
-            <details class="test-details" open>
-              <summary>View Service Endpoints & Test Cases (1 total)</summary>
-              <div class="test-list">
-                
-              <div class="test-row status-passed" data-status="passed" data-title="test_get_courses_p0">
+              <div class="test-row status-passed" data-status="passed" data-title="test_p1_login_wrong_password">
                 <div class="test-info">
                   <span class="test-badge pass">PASS</span>
-                  <span class="test-title">test_get_courses_p0</span>
-                  <span class="marker-tag">p0</span><span class="marker-tag">api</span>
+                  <span class="test-title">test_p1_login_wrong_password</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 1.0s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_p1_login_nonexistent_email">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_p1_login_nonexistent_email</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 0.73s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_p1_login_empty_payload">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_p1_login_empty_payload</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
                 </div>
                 <div class="test-duration">⏱️ 0.62s</div>
               </div>
               
             
-              </div>
-            </details>
-          </div>
-        
-          <div class="service-card" data-service="interview service">
-            <div class="service-header">
-              <div class="service-title-container">
-                <h3 class="service-name">⚙️ Interview Service</h3>
-                <span class="badge badge-pass">100% Passed</span>
-              </div>
-              <div class="service-stats-summary">
-                <span class="stat-pill pass-pill">✅ 1 Passed</span>
-                <span class="stat-pill fail-pill">❌ 0 Failed</span>
-                
-                <span class="stat-pill duration-pill">⏱️ 0.4s</span>
-              </div>
-            </div>
-            
-            <div class="progress-bar-container">
-              <div class="progress-bar bar-pass" style="width: 100.0%;"></div>
-            </div>
-            <div class="pass-rate-label">100.0% Pass Rate (1/1 tests)</div>
-
-            <details class="test-details" open>
-              <summary>View Service Endpoints & Test Cases (1 total)</summary>
-              <div class="test-list">
-                
-              <div class="test-row status-passed" data-status="passed" data-title="test_get_interview_sessions_p0">
+              <div class="test-row status-passed" data-status="passed" data-title="test_p1_login_missing_password">
                 <div class="test-info">
                   <span class="test-badge pass">PASS</span>
-                  <span class="test-title">test_get_interview_sessions_p0</span>
-                  <span class="marker-tag">p0</span><span class="marker-tag">api</span>
+                  <span class="test-title">test_p1_login_missing_password</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
                 </div>
-                <div class="test-duration">⏱️ 0.38s</div>
+                <div class="test-duration">⏱️ 1.84s</div>
               </div>
               
             
-              </div>
-            </details>
-          </div>
-        
-          <div class="service-card" data-service="quiz service">
-            <div class="service-header">
-              <div class="service-title-container">
-                <h3 class="service-name">⚙️ Quiz Service</h3>
-                <span class="badge badge-pass">100% Passed</span>
-              </div>
-              <div class="service-stats-summary">
-                <span class="stat-pill pass-pill">✅ 1 Passed</span>
-                <span class="stat-pill fail-pill">❌ 0 Failed</span>
-                
-                <span class="stat-pill duration-pill">⏱️ 0.5s</span>
-              </div>
-            </div>
-            
-            <div class="progress-bar-container">
-              <div class="progress-bar bar-pass" style="width: 100.0%;"></div>
-            </div>
-            <div class="pass-rate-label">100.0% Pass Rate (1/1 tests)</div>
-
-            <details class="test-details" open>
-              <summary>View Service Endpoints & Test Cases (1 total)</summary>
-              <div class="test-list">
-                
-              <div class="test-row status-passed" data-status="passed" data-title="test_get_assessment_p0">
+              <div class="test-row status-passed" data-status="passed" data-title="test_p1_login_missing_email">
                 <div class="test-info">
                   <span class="test-badge pass">PASS</span>
-                  <span class="test-title">test_get_assessment_p0</span>
-                  <span class="marker-tag">p0</span><span class="marker-tag">api</span>
+                  <span class="test-title">test_p1_login_missing_email</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
                 </div>
-                <div class="test-duration">⏱️ 0.51s</div>
+                <div class="test-duration">⏱️ 0.72s</div>
               </div>
               
             
-              </div>
-            </details>
-          </div>
-        
-          <div class="service-card" data-service="resumes service">
-            <div class="service-header">
-              <div class="service-title-container">
-                <h3 class="service-name">⚙️ Resumes Service</h3>
-                <span class="badge badge-pass">100% Passed</span>
-              </div>
-              <div class="service-stats-summary">
-                <span class="stat-pill pass-pill">✅ 1 Passed</span>
-                <span class="stat-pill fail-pill">❌ 0 Failed</span>
-                
-                <span class="stat-pill duration-pill">⏱️ 0.4s</span>
-              </div>
-            </div>
-            
-            <div class="progress-bar-container">
-              <div class="progress-bar bar-pass" style="width: 100.0%;"></div>
-            </div>
-            <div class="pass-rate-label">100.0% Pass Rate (1/1 tests)</div>
-
-            <details class="test-details" open>
-              <summary>View Service Endpoints & Test Cases (1 total)</summary>
-              <div class="test-list">
-                
-              <div class="test-row status-passed" data-status="passed" data-title="test_get_user_resumes_p0">
+              <div class="test-row status-passed" data-status="passed" data-title="test_p1_login_sql_injection_in_email">
                 <div class="test-info">
                   <span class="test-badge pass">PASS</span>
-                  <span class="test-title">test_get_user_resumes_p0</span>
-                  <span class="marker-tag">p0</span><span class="marker-tag">api</span>
+                  <span class="test-title">test_p1_login_sql_injection_in_email</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
                 </div>
-                <div class="test-duration">⏱️ 0.41s</div>
+                <div class="test-duration">⏱️ 0.5s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_refresh_token">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_refresh_token</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 2.08s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_oauth_google_authorize">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_oauth_google_authorize</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 3.08s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_oauth_google_exchange">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_oauth_google_exchange</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 0.53s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_google">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_google</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 0.74s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_oauth_linkedin_authorize">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_oauth_linkedin_authorize</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 0.57s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_oauth_linkedin_exchange">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_oauth_linkedin_exchange</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 0.84s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_linkedin">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_linkedin</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 4.96s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_verify_email">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_verify_email</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 2.08s</div>
+              </div>
+              
+            
+              <div class="test-row status-failed" data-status="failed" data-title="test_resend_verification">
+                <div class="test-info">
+                  <span class="test-badge fail">FAIL</span>
+                  <span class="test-title">test_resend_verification</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 0.93s</div>
+              </div>
+              <div class="error-log"><pre>self = &lt;tests.api.test_auth.TestAuthOther object at 0x000002310D6CEAD0&gt;
+authorized_api = &lt;api.endpoints.auth_api.AuthAPI object at 0x000002310D9268F0&gt;
+
+    @allure.id("AUTH_P0_013")
+    def test_resend_verification(self, authorized_api):
+        auth_api = authorized_api
+        res = auth_api.resend_verification(email="raj@example.com")
+&gt;       assert res.status_code ==200, f"resend verification failed: {res.text[:200]}"
+E       AssertionError: resend verification failed: {"detail":[{"type":"missing","loc":["body"],"msg":"Field required","input":null}]}
+E       assert 422 == 200
+E        +  where 422 = &lt;Response [422]&gt;.status_code
+
+tests\api\test_auth.py:206: AssertionError</pre></div>
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_forgot_password">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_forgot_password</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 0.69s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_reset_password">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_reset_password</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 0.69s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_root">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_root</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 0.71s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_health">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_health</span>
+                  <span class="marker-tag">api</span><span class="marker-tag">p0</span>
+                </div>
+                <div class="test-duration">⏱️ 0.67s</div>
               </div>
               
             
