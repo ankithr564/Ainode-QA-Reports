@@ -222,7 +222,7 @@
         <div class="logo-badge">API</div>
         <div>
           <h1>AiNode Backend API — Executive Test Report</h1>
-          <div class="subtitle">Generated: August 30, 2026 - 10:29 PM • Framework: Pytest Python</div>
+          <div class="subtitle">Generated: August 31, 2026 - 08:25 AM • Framework: Pytest Python</div>
         </div>
       </div>
       <div>
@@ -236,36 +236,36 @@
           <span class="metric-label">Total Test Cases</span>
           <span>⚡</span>
         </div>
-        <div class="metric-value text-accent">5</div>
+        <div class="metric-value text-accent">82</div>
       </div>
       <div class="metric-card passed">
         <div class="metric-header">
           <span class="metric-label">Passed Tests</span>
           <span>✅</span>
         </div>
-        <div class="metric-value text-pass">5</div>
+        <div class="metric-value text-pass">69</div>
       </div>
       <div class="metric-card failed">
         <div class="metric-header">
           <span class="metric-label">Failed Tests</span>
           <span>❌</span>
         </div>
-        <div class="metric-value text-fail">0</div>
+        <div class="metric-value text-fail">13</div>
       </div>
       <div class="metric-card passrate">
         <div class="metric-header">
           <span class="metric-label">Pass Rate</span>
           <span>📈</span>
         </div>
-        <div class="metric-value text-pass">100.0%</div>
+        <div class="metric-value text-fail">84.1%</div>
       </div>
     </div>
 
     <div class="toolbar">
       <div class="filter-tabs">
-        <button class="tab-btn active" onclick="filterStatus('all', this)">All (5)</button>
-        <button class="tab-btn" onclick="filterStatus('passed', this)">✅ Passed (5)</button>
-        <button class="tab-btn" onclick="filterStatus('failed', this)">❌ Failed (0)</button>
+        <button class="tab-btn active" onclick="filterStatus('all', this)">All (82)</button>
+        <button class="tab-btn" onclick="filterStatus('passed', this)">✅ Passed (69)</button>
+        <button class="tab-btn" onclick="filterStatus('failed', this)">❌ Failed (13)</button>
         
       </div>
       <div class="search-box">
@@ -281,32 +281,276 @@
             <div class="service-header">
               <div class="service-title-container">
                 <h3 class="service-name">⚙️ Auth Service</h3>
+                <span class="badge badge-fail">❌ 2 Failed</span>
+              </div>
+              <div class="service-stats-summary">
+                <span class="stat-pill pass-pill">✅ 13 Passed</span>
+                <span class="stat-pill fail-pill">❌ 2 Failed</span>
+                
+                <span class="stat-pill duration-pill">⏱️ 5.5s</span>
+              </div>
+            </div>
+            
+            <div class="progress-bar-container">
+              <div class="progress-bar bar-fail" style="width: 86.7%;"></div>
+            </div>
+            <div class="pass-rate-label">86.7% Pass Rate (13/15 tests)</div>
+
+            <details class="test-details" open>
+              <summary>View Service Endpoints & Test Cases (15 total)</summary>
+              <div class="test-list">
+                
+              <div class="test-row status-passed" data-status="passed" data-title="test_register_user">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_register_user</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.91s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_login">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_login</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 1.07s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_refresh_token">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_refresh_token</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.29s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_verify_email">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_verify_email</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.24s</div>
+              </div>
+              
+            
+              <div class="test-row status-failed" data-status="failed" data-title="test_resend_verification">
+                <div class="test-info">
+                  <span class="test-badge fail">FAIL</span>
+                  <span class="test-title">test_resend_verification</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.37s</div>
+              </div>
+              <div class="error-log"><pre>self = &lt;tests.api.test_auth.TestAuthOther object at 0x000002384F88C280&gt;
+authorized_api = &lt;api.endpoints.auth_api.AuthAPI object at 0x00000238500EA7A0&gt;
+
+    @allure.id("AUTH_P0_013")
+    @pytest.mark.sanity
+    def test_resend_verification(self, authorized_api):
+        auth_api = authorized_api
+        res = auth_api.resend_verification(email="raj@example.com")
+&gt;       assert res.status_code ==200, f"resend verification failed: {res.text[:200]}"
+E       AssertionError: resend verification failed: {"detail":[{"type":"missing","loc":["body"],"msg":"Field required","input":null}]}
+E       assert 422 == 200
+E        +  where 422 = &lt;Response [422]&gt;.status_code
+
+tests\api\test_auth.py:211: AssertionError</pre></div>
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_forgot_password">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_forgot_password</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.39s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_reset_password">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_reset_password</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.31s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_get_me">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_get_me</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.28s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_list_roles">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_list_roles</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.26s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_create_roles">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_create_roles</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.22s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_getrole">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_getrole</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.24s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_create_university">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_create_university</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.25s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_bulk_invite_students">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_bulk_invite_students</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.19s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_get_my_pending_university_invites">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_get_my_pending_university_invites</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.25s</div>
+              </div>
+              
+            
+              <div class="test-row status-failed" data-status="failed" data-title="test_list_my_university_users">
+                <div class="test-info">
+                  <span class="test-badge fail">FAIL</span>
+                  <span class="test-title">test_list_my_university_users</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.24s</div>
+              </div>
+              <div class="error-log"><pre>self = &lt;tests.api.test_auth.TestAuthUniversity object at 0x000002384F88D330&gt;
+admin_authorized_api = &lt;api.endpoints.auth_api.AuthAPI object at 0x00000238500F30D0&gt;
+
+    @allure.id("AUTH_P0_032")
+    @pytest.mark.sanity
+    def test_list_my_university_users(self, admin_authorized_api):
+        res = admin_authorized_api.list_my_university_users()
+        assert res.status_code == 200, f"list university users failed: {res.text[:200]}"
+        body = res.json()
+        users = body if isinstance(body, list) else (body.get("items") or body.get("data") or body.get("users") or [])
+&gt;       assert users, f"users missing in response: {body}"
+E       AssertionError: users missing in response: {'items': [], 'page': 1, 'page_size': 20, 'total': 0}
+E       assert []
+
+tests\api\test_auth.py:433: AssertionError</pre></div>
+            
+              </div>
+            </details>
+          </div>
+        
+          <div class="service-card" data-service="billing service">
+            <div class="service-header">
+              <div class="service-title-container">
+                <h3 class="service-name">⚙️ Billing Service</h3>
                 <span class="badge badge-pass">100% Passed</span>
               </div>
               <div class="service-stats-summary">
-                <span class="stat-pill pass-pill">✅ 1 Passed</span>
+                <span class="stat-pill pass-pill">✅ 5 Passed</span>
                 <span class="stat-pill fail-pill">❌ 0 Failed</span>
                 
-                <span class="stat-pill duration-pill">⏱️ 0.5s</span>
+                <span class="stat-pill duration-pill">⏱️ 2.1s</span>
               </div>
             </div>
             
             <div class="progress-bar-container">
               <div class="progress-bar bar-pass" style="width: 100.0%;"></div>
             </div>
-            <div class="pass-rate-label">100.0% Pass Rate (1/1 tests)</div>
+            <div class="pass-rate-label">100.0% Pass Rate (5/5 tests)</div>
 
             <details class="test-details" open>
-              <summary>View Service Endpoints & Test Cases (1 total)</summary>
+              <summary>View Service Endpoints & Test Cases (5 total)</summary>
               <div class="test-list">
                 
-              <div class="test-row status-passed" data-status="passed" data-title="test_login_user_p0">
+              <div class="test-row status-passed" data-status="passed" data-title="test_root">
                 <div class="test-info">
                   <span class="test-badge pass">PASS</span>
-                  <span class="test-title">test_login_user_p0</span>
-                  <span class="marker-tag">p0</span><span class="marker-tag">api</span>
+                  <span class="test-title">test_root</span>
+                  <span class="marker-tag">api</span>
                 </div>
-                <div class="test-duration">⏱️ 0.45s</div>
+                <div class="test-duration">⏱️ 0.69s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_health">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_health</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.2s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_business_metrics">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_business_metrics</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.26s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_get_balance">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_get_balance</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.7s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_list_transactions">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_list_transactions</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.23s</div>
               </div>
               
             
@@ -321,29 +565,89 @@
                 <span class="badge badge-pass">100% Passed</span>
               </div>
               <div class="service-stats-summary">
-                <span class="stat-pill pass-pill">✅ 1 Passed</span>
+                <span class="stat-pill pass-pill">✅ 7 Passed</span>
                 <span class="stat-pill fail-pill">❌ 0 Failed</span>
                 
-                <span class="stat-pill duration-pill">⏱️ 0.6s</span>
+                <span class="stat-pill duration-pill">⏱️ 3.4s</span>
               </div>
             </div>
             
             <div class="progress-bar-container">
               <div class="progress-bar bar-pass" style="width: 100.0%;"></div>
             </div>
-            <div class="pass-rate-label">100.0% Pass Rate (1/1 tests)</div>
+            <div class="pass-rate-label">100.0% Pass Rate (7/7 tests)</div>
 
             <details class="test-details" open>
-              <summary>View Service Endpoints & Test Cases (1 total)</summary>
+              <summary>View Service Endpoints & Test Cases (7 total)</summary>
               <div class="test-list">
                 
-              <div class="test-row status-passed" data-status="passed" data-title="test_get_courses_p0">
+              <div class="test-row status-passed" data-status="passed" data-title="test_root">
                 <div class="test-info">
                   <span class="test-badge pass">PASS</span>
-                  <span class="test-title">test_get_courses_p0</span>
-                  <span class="marker-tag">p0</span><span class="marker-tag">api</span>
+                  <span class="test-title">test_root</span>
+                  <span class="marker-tag">api</span>
                 </div>
-                <div class="test-duration">⏱️ 0.62s</div>
+                <div class="test-duration">⏱️ 0.83s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_health">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_health</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.84s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_create_course">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_create_course</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.74s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_list_courses">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_list_courses</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.23s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_update_course">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_update_course</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.22s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_create_module">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_create_module</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.25s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_create_lesson">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_create_lesson</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.29s</div>
               </div>
               
             
@@ -358,29 +662,193 @@
                 <span class="badge badge-pass">100% Passed</span>
               </div>
               <div class="service-stats-summary">
-                <span class="stat-pill pass-pill">✅ 1 Passed</span>
+                <span class="stat-pill pass-pill">✅ 2 Passed</span>
                 <span class="stat-pill fail-pill">❌ 0 Failed</span>
                 
-                <span class="stat-pill duration-pill">⏱️ 0.4s</span>
+                <span class="stat-pill duration-pill">⏱️ 3.2s</span>
               </div>
             </div>
             
             <div class="progress-bar-container">
               <div class="progress-bar bar-pass" style="width: 100.0%;"></div>
             </div>
-            <div class="pass-rate-label">100.0% Pass Rate (1/1 tests)</div>
+            <div class="pass-rate-label">100.0% Pass Rate (2/2 tests)</div>
 
             <details class="test-details" open>
-              <summary>View Service Endpoints & Test Cases (1 total)</summary>
+              <summary>View Service Endpoints & Test Cases (2 total)</summary>
               <div class="test-list">
                 
-              <div class="test-row status-passed" data-status="passed" data-title="test_get_interview_sessions_p0">
+              <div class="test-row status-passed" data-status="passed" data-title="test_suggest_roles">
                 <div class="test-info">
                   <span class="test-badge pass">PASS</span>
-                  <span class="test-title">test_get_interview_sessions_p0</span>
-                  <span class="marker-tag">p0</span><span class="marker-tag">api</span>
+                  <span class="test-title">test_suggest_roles</span>
+                  <span class="marker-tag">api</span>
                 </div>
-                <div class="test-duration">⏱️ 0.38s</div>
+                <div class="test-duration">⏱️ 2.9s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_start_interview">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_start_interview</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.28s</div>
+              </div>
+              
+            
+              </div>
+            </details>
+          </div>
+        
+          <div class="service-card" data-service="jobs endpoints service">
+            <div class="service-header">
+              <div class="service-title-container">
+                <h3 class="service-name">⚙️ Jobs Endpoints Service</h3>
+                <span class="badge badge-pass">100% Passed</span>
+              </div>
+              <div class="service-stats-summary">
+                <span class="stat-pill pass-pill">✅ 6 Passed</span>
+                <span class="stat-pill fail-pill">❌ 0 Failed</span>
+                
+                <span class="stat-pill duration-pill">⏱️ 2.7s</span>
+              </div>
+            </div>
+            
+            <div class="progress-bar-container">
+              <div class="progress-bar bar-pass" style="width: 100.0%;"></div>
+            </div>
+            <div class="pass-rate-label">100.0% Pass Rate (6/6 tests)</div>
+
+            <details class="test-details" open>
+              <summary>View Service Endpoints & Test Cases (6 total)</summary>
+              <div class="test-list">
+                
+              <div class="test-row status-passed" data-status="passed" data-title="test_jobs_docs">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_jobs_docs</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 1.01s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_create_company">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_create_company</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.58s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_list_companies">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_list_companies</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.2s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_get_company">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_get_company</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.26s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_update_company">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_update_company</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.27s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_search_jobs">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_search_jobs</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.39s</div>
+              </div>
+              
+            
+              </div>
+            </details>
+          </div>
+        
+          <div class="service-card" data-service="mentorship service">
+            <div class="service-header">
+              <div class="service-title-container">
+                <h3 class="service-name">⚙️ Mentorship Service</h3>
+                <span class="badge badge-pass">100% Passed</span>
+              </div>
+              <div class="service-stats-summary">
+                <span class="stat-pill pass-pill">✅ 4 Passed</span>
+                <span class="stat-pill fail-pill">❌ 0 Failed</span>
+                
+                <span class="stat-pill duration-pill">⏱️ 2.9s</span>
+              </div>
+            </div>
+            
+            <div class="progress-bar-container">
+              <div class="progress-bar bar-pass" style="width: 100.0%;"></div>
+            </div>
+            <div class="pass-rate-label">100.0% Pass Rate (4/4 tests)</div>
+
+            <details class="test-details" open>
+              <summary>View Service Endpoints & Test Cases (4 total)</summary>
+              <div class="test-list">
+                
+              <div class="test-row status-passed" data-status="passed" data-title="test_root">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_root</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.96s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_health">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_health</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.37s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_get_me">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_get_me</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.22s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_update_me">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_update_me</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 1.33s</div>
               </div>
               
             
@@ -392,34 +860,560 @@
             <div class="service-header">
               <div class="service-title-container">
                 <h3 class="service-name">⚙️ Quiz Service</h3>
-                <span class="badge badge-pass">100% Passed</span>
+                <span class="badge badge-fail">❌ 1 Failed</span>
               </div>
               <div class="service-stats-summary">
-                <span class="stat-pill pass-pill">✅ 1 Passed</span>
-                <span class="stat-pill fail-pill">❌ 0 Failed</span>
+                <span class="stat-pill pass-pill">✅ 13 Passed</span>
+                <span class="stat-pill fail-pill">❌ 1 Failed</span>
                 
-                <span class="stat-pill duration-pill">⏱️ 0.5s</span>
+                <span class="stat-pill duration-pill">⏱️ 14.2s</span>
               </div>
             </div>
             
             <div class="progress-bar-container">
-              <div class="progress-bar bar-pass" style="width: 100.0%;"></div>
+              <div class="progress-bar bar-fail" style="width: 92.9%;"></div>
             </div>
-            <div class="pass-rate-label">100.0% Pass Rate (1/1 tests)</div>
+            <div class="pass-rate-label">92.9% Pass Rate (13/14 tests)</div>
 
             <details class="test-details" open>
-              <summary>View Service Endpoints & Test Cases (1 total)</summary>
+              <summary>View Service Endpoints & Test Cases (14 total)</summary>
               <div class="test-list">
                 
+              <div class="test-row status-passed" data-status="passed" data-title="test_generate_aptitude">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_generate_aptitude</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 1.36s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_evaluate_aptitude">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_evaluate_aptitude</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.38s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_generate_challenge">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_generate_challenge</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 2.7s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_evaluate_code">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_evaluate_code</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.28s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_generate_mcq">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_generate_mcq</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 3.21s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_evaluate_behavioral">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_evaluate_behavioral</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.29s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_evaluate_writing">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_evaluate_writing</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.25s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_analyze_performance_gaps">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_analyze_performance_gaps</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 3.77s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_create_assessment">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_create_assessment</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.2s</div>
+              </div>
+              
+            
               <div class="test-row status-passed" data-status="passed" data-title="test_get_assessment_p0">
                 <div class="test-info">
                   <span class="test-badge pass">PASS</span>
                   <span class="test-title">test_get_assessment_p0</span>
-                  <span class="marker-tag">p0</span><span class="marker-tag">api</span>
+                  <span class="marker-tag">api</span>
                 </div>
-                <div class="test-duration">⏱️ 0.51s</div>
+                <div class="test-duration">⏱️ 0.23s</div>
               </div>
               
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_create_assessment_session_p0">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_create_assessment_session_p0</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.26s</div>
+              </div>
+              
+            
+              <div class="test-row status-failed" data-status="failed" data-title="test_get_internal_skill_scores">
+                <div class="test-info">
+                  <span class="test-badge fail">FAIL</span>
+                  <span class="test-title">test_get_internal_skill_scores</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.54s</div>
+              </div>
+              <div class="error-log"><pre>self = &lt;tests.api.test_quiz.TestQuizNewEndpoints object at 0x000002384FE5CB50&gt;
+admin_authorized_api = &lt;api.endpoints.auth_api.AuthAPI object at 0x00000238500F30D0&gt;
+
+    @allure.id("QUIZ_P0_057")
+    @pytest.mark.sanity
+    def test_get_internal_skill_scores(self, admin_authorized_api):
+        """P0: GET /v1/internal/skill-scores/{user_id} — fetch skill scores for a user."""
+        quiz_api = admin_authorized_api.get_api(QuizAPI)
+        res = quiz_api.get_internal_skill_scores(user_id="1")
+&gt;       assert res.status_code in (200, 404), f"get skill scores failed: {res.text[:200]}"
+E       AssertionError: get skill scores failed: {"detail":"Forbidden: internal auth is not configured"}
+E       assert 403 in (200, 404)
+E        +  where 403 = &lt;Response [403]&gt;.status_code
+
+tests\api\test_quiz.py:775: AssertionError</pre></div>
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_get_evaluations_by_type">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_get_evaluations_by_type</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.42s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_get_session_by_id">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_get_session_by_id</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.28s</div>
+              </div>
+              
+            
+              </div>
+            </details>
+          </div>
+        
+          <div class="service-card" data-service="recruitment service">
+            <div class="service-header">
+              <div class="service-title-container">
+                <h3 class="service-name">⚙️ Recruitment Service</h3>
+                <span class="badge badge-fail">❌ 10 Failed</span>
+              </div>
+              <div class="service-stats-summary">
+                <span class="stat-pill pass-pill">✅ 5 Passed</span>
+                <span class="stat-pill fail-pill">❌ 10 Failed</span>
+                
+                <span class="stat-pill duration-pill">⏱️ 4.4s</span>
+              </div>
+            </div>
+            
+            <div class="progress-bar-container">
+              <div class="progress-bar bar-fail" style="width: 33.3%;"></div>
+            </div>
+            <div class="pass-rate-label">33.3% Pass Rate (5/15 tests)</div>
+
+            <details class="test-details" open>
+              <summary>View Service Endpoints & Test Cases (15 total)</summary>
+              <div class="test-list">
+                
+              <div class="test-row status-failed" data-status="failed" data-title="test_create_jd">
+                <div class="test-info">
+                  <span class="test-badge fail">FAIL</span>
+                  <span class="test-title">test_create_jd</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.76s</div>
+              </div>
+              <div class="error-log"><pre>self = &lt;tests.api.test_recruitment.TestRecruitmentJD object at 0x000002384FB55ED0&gt;
+admin_authorized_api = &lt;api.endpoints.auth_api.AuthAPI object at 0x00000238500F30D0&gt;
+
+    @pytest.mark.sanity
+    @allure.id(RecruitIDs.CREATE_JD)
+    def test_create_jd(self, admin_authorized_api):
+        """Create a structured Job Description."""
+        api = admin_authorized_api.get_api(RecruitmentAPI)
+        payload = {
+            "job_title": "Senior Python Engineer",
+            "role_type": "full_time",
+            "work_mode": "remote",
+            "experience_level": "senior",
+            "required_skills": ["Python", "FastAPI", "PostgreSQL"],
+            "preferred_skills": ["Docker", "Kubernetes"],
+            "location": "Bangalore, India",
+            "description": "Build scalable microservices and API gateways.",
+        }
+    
+        res = api.create_jd(payload)
+        print("CREATE JD STATUS:", res.status_code)
+        print("CREATE JD BODY:", res.text[:500])
+&gt;       assert res.status_code in (200, 201), f"create JD failed: {res.text[:300]}"
+E       AssertionError: create JD failed: {"detail":"Method Not Allowed"}
+E       assert 405 in (200, 201)
+E        +  where 405 = &lt;Response [405]&gt;.status_code
+
+tests\api\test_recruitment.py:39: AssertionError</pre></div>
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_list_jds">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_list_jds</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.35s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_update_jd">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_update_jd</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.21s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_get_jd_content">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_get_jd_content</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.23s</div>
+              </div>
+              
+            
+              <div class="test-row status-failed" data-status="failed" data-title="test_check_jd_duplicate">
+                <div class="test-info">
+                  <span class="test-badge fail">FAIL</span>
+                  <span class="test-title">test_check_jd_duplicate</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.21s</div>
+              </div>
+              <div class="error-log"><pre>self = &lt;tests.api.test_recruitment.TestRecruitmentJD object at 0x000002384FB55060&gt;
+admin_authorized_api = &lt;api.endpoints.auth_api.AuthAPI object at 0x00000238500F30D0&gt;
+
+    @allure.id(RecruitIDs.CHECK_JD_DUPLICATE)
+    @pytest.mark.sanity
+    def test_check_jd_duplicate(self, admin_authorized_api):
+        """Check if the created JD is a duplicate."""
+        api = admin_authorized_api.get_api(RecruitmentAPI)
+    
+        payload = {
+            "role": "Lead Python Engineer",
+            "location": "Bangalore",
+            "similarity_threshold": 0.7,
+        }
+    
+        res = api.check_jd_duplicate(payload)
+        print("CHECK DUPLICATE STATUS:", res.status_code)
+&gt;       assert res.status_code == 200, f"check duplicate failed: {res.text[:300]}"
+E       AssertionError: check duplicate failed: {"detail":"Method Not Allowed"}
+E       assert 405 == 200
+E        +  where 405 = &lt;Response [405]&gt;.status_code
+
+tests\api\test_recruitment.py:110: AssertionError</pre></div>
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_run_matching_for_jd">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_run_matching_for_jd</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.37s</div>
+              </div>
+              
+            
+              <div class="test-row status-failed" data-status="failed" data-title="test_get_match_results">
+                <div class="test-info">
+                  <span class="test-badge fail">FAIL</span>
+                  <span class="test-title">test_get_match_results</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.28s</div>
+              </div>
+              <div class="error-log"><pre>self = &lt;tests.api.test_recruitment.TestRecruitmentMatching object at 0x000002384FB55DB0&gt;
+admin_authorized_api = &lt;api.endpoints.auth_api.AuthAPI object at 0x00000238500F30D0&gt;
+
+    @allure.id(RecruitIDs.GET_MATCH_RESULTS)
+    @pytest.mark.sanity
+    def test_get_match_results(self, admin_authorized_api):
+        """Retrieve stored match results for a JD."""
+        api = admin_authorized_api.get_api(RecruitmentAPI)
+        jd_id = TestRecruitmentJD.created_jd_id
+        if not jd_id:
+            pytest.skip("No JD created to get results for")
+    
+        res = api.get_match_results(jd_id)
+        print("GET MATCH RESULTS STATUS:", res.status_code)
+&gt;       assert res.status_code == 200, f"get match results failed: {res.text[:300]}"
+E       AssertionError: get match results failed: {"detail":"Not Found"}
+E       assert 404 == 200
+E        +  where 404 = &lt;Response [404]&gt;.status_code
+
+tests\api\test_recruitment.py:175: AssertionError</pre></div>
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_shortlist_candidates">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_shortlist_candidates</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.32s</div>
+              </div>
+              
+            
+              <div class="test-row status-failed" data-status="failed" data-title="test_get_shortlisted">
+                <div class="test-info">
+                  <span class="test-badge fail">FAIL</span>
+                  <span class="test-title">test_get_shortlisted</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.25s</div>
+              </div>
+              <div class="error-log"><pre>self = &lt;tests.api.test_recruitment.TestRecruitmentShortlist object at 0x000002384F7605E0&gt;
+admin_authorized_api = &lt;api.endpoints.auth_api.AuthAPI object at 0x00000238500F30D0&gt;
+
+    @allure.id(RecruitIDs.GET_SHORTLISTED)
+    @pytest.mark.sanity
+    def test_get_shortlisted(self, admin_authorized_api):
+        """Get shortlisted candidates for a JD."""
+        api = admin_authorized_api.get_api(RecruitmentAPI)
+        jd_id = TestRecruitmentJD.created_jd_id
+        if not jd_id:
+            pytest.skip("No JD for shortlist retrieval")
+    
+        res = api.get_shortlisted(jd_id)
+        print("GET SHORTLISTED STATUS:", res.status_code)
+&gt;       assert res.status_code == 200, f"get shortlisted failed: {res.text[:300]}"
+E       AssertionError: get shortlisted failed: {"detail":"Not Found"}
+E       assert 404 == 200
+E        +  where 404 = &lt;Response [404]&gt;.status_code
+
+tests\api\test_recruitment.py:231: AssertionError</pre></div>
+            
+              <div class="test-row status-failed" data-status="failed" data-title="test_schedule_interview">
+                <div class="test-info">
+                  <span class="test-badge fail">FAIL</span>
+                  <span class="test-title">test_schedule_interview</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.23s</div>
+              </div>
+              <div class="error-log"><pre>self = &lt;tests.api.test_recruitment.TestRecruitmentInterviews object at 0x000002384F760190&gt;
+admin_authorized_api = &lt;api.endpoints.auth_api.AuthAPI object at 0x00000238500F30D0&gt;
+
+    @allure.id(RecruitIDs.SCHEDULE_INTERVIEW)
+    @pytest.mark.sanity
+    def test_schedule_interview(self, admin_authorized_api):
+        """Schedule interview rounds for a JD."""
+        api = admin_authorized_api.get_api(RecruitmentAPI)
+        jd_id = TestRecruitmentJD.created_jd_id
+        if not jd_id:
+            pytest.skip("No JD for interview scheduling")
+    
+        payload = {
+            "jd_id": jd_id,
+            "mode": "virtual",
+            "meet_link": "https://meet.google.com/abc-defg-hij",
+            "rounds": [
+                {"round_name": "Technical Round 1", "date": "2026-07-15T10:00:00Z"},
+            ],
+        }
+    
+        res = api.schedule_interview(payload)
+        print("SCHEDULE INTERVIEW STATUS:", res.status_code)
+&gt;       assert res.status_code in (200, 201), f"schedule interview failed: {res.text[:300]}"
+E       AssertionError: schedule interview failed: {"detail":[{"type":"missing","loc":["body","interview_date"],"msg":"Field required","input":{"jd_id":80,"mode":"virtual","meet_link":"https://meet.google.com/abc-defg-hij","rounds":[{"round_name":"Technical Round 1","date":"2026-07-15T10:00:00Z"}]}},{"type":"missing","loc":["body","rounds",0,"round_
+E       assert 422 in (200, 201)
+E        +  where 422 = &lt;Response [422]&gt;.status_code
+
+tests\api\test_recruitment.py:288: AssertionError</pre></div>
+            
+              <div class="test-row status-failed" data-status="failed" data-title="test_get_candidate_progress">
+                <div class="test-info">
+                  <span class="test-badge fail">FAIL</span>
+                  <span class="test-title">test_get_candidate_progress</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.24s</div>
+              </div>
+              <div class="error-log"><pre>self = &lt;tests.api.test_recruitment.TestRecruitmentInterviews object at 0x000002384F762EF0&gt;
+admin_authorized_api = &lt;api.endpoints.auth_api.AuthAPI object at 0x00000238500F30D0&gt;
+
+    @allure.id(RecruitIDs.GET_CANDIDATE_PROGRESS)
+    @pytest.mark.sanity
+    def test_get_candidate_progress(self, admin_authorized_api):
+        """Track candidate pipeline progress."""
+        api = admin_authorized_api.get_api(RecruitmentAPI)
+    
+        res = api.get_candidate_progress()
+        print("GET CANDIDATE PROGRESS STATUS:", res.status_code)
+&gt;       assert res.status_code == 200, f"get progress failed: {res.text[:300]}"
+E       AssertionError: get progress failed: {"detail":"Not Found"}
+E       assert 404 == 200
+E        +  where 404 = &lt;Response [404]&gt;.status_code
+
+tests\api\test_recruitment.py:322: AssertionError</pre></div>
+            
+              <div class="test-row status-failed" data-status="failed" data-title="test_create_group">
+                <div class="test-info">
+                  <span class="test-badge fail">FAIL</span>
+                  <span class="test-title">test_create_group</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.21s</div>
+              </div>
+              <div class="error-log"><pre>self = &lt;tests.api.test_recruitment.TestRecruitmentCompanyGroups object at 0x000002384F762680&gt;
+admin_authorized_api = &lt;api.endpoints.auth_api.AuthAPI object at 0x00000238500F30D0&gt;
+
+    @allure.id(RecruitIDs.CREATE_GROUP)
+    @pytest.mark.sanity
+    def test_create_group(self, admin_authorized_api):
+        """Create a new company group/segment."""
+        api = admin_authorized_api.get_api(RecruitmentAPI)
+    
+        payload = {
+            "name": "QA Automation Engineers",
+            "description": "Candidates for QA automation roles",
+        }
+    
+        res = api.create_company_group(payload)
+        print("CREATE GROUP STATUS:", res.status_code)
+&gt;       assert res.status_code in (200, 201), f"create group failed: {res.text[:300]}"
+E       AssertionError: create group failed: {"detail":"Not Found"}
+E       assert 404 in (200, 201)
+E        +  where 404 = &lt;Response [404]&gt;.status_code
+
+tests\api\test_recruitment.py:350: AssertionError</pre></div>
+            
+              <div class="test-row status-failed" data-status="failed" data-title="test_list_groups">
+                <div class="test-info">
+                  <span class="test-badge fail">FAIL</span>
+                  <span class="test-title">test_list_groups</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.23s</div>
+              </div>
+              <div class="error-log"><pre>self = &lt;tests.api.test_recruitment.TestRecruitmentCompanyGroups object at 0x000002384F763B80&gt;
+admin_authorized_api = &lt;api.endpoints.auth_api.AuthAPI object at 0x00000238500F30D0&gt;
+
+    @allure.id(RecruitIDs.LIST_GROUPS)
+    @pytest.mark.sanity
+    def test_list_groups(self, admin_authorized_api):
+        """List all company groups."""
+        api = admin_authorized_api.get_api(RecruitmentAPI)
+    
+        res = api.list_company_groups()
+        print("LIST GROUPS STATUS:", res.status_code)
+&gt;       assert res.status_code == 200, f"list groups failed: {res.text[:300]}"
+E       AssertionError: list groups failed: {"detail":"Not Found"}
+E       assert 404 == 200
+E        +  where 404 = &lt;Response [404]&gt;.status_code
+
+tests\api\test_recruitment.py:365: AssertionError</pre></div>
+            
+              <div class="test-row status-failed" data-status="failed" data-title="test_create_session">
+                <div class="test-info">
+                  <span class="test-badge fail">FAIL</span>
+                  <span class="test-title">test_create_session</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.22s</div>
+              </div>
+              <div class="error-log"><pre>self = &lt;tests.api.test_recruitment.TestRecruitmentCorporateSessions object at 0x000002384FB552A0&gt;
+admin_authorized_api = &lt;api.endpoints.auth_api.AuthAPI object at 0x00000238500F30D0&gt;
+
+    @allure.id(RecruitIDs.CREATE_SESSION)
+    @pytest.mark.sanity
+    def test_create_session(self, admin_authorized_api):
+        """Create a new corporate session (DRAFT)."""
+        api = admin_authorized_api.get_api(RecruitmentAPI)
+    
+        payload = {
+            "title": "Python Backend Engineering - Q3 2026",
+            "type": "interview",
+        }
+    
+        res = api.create_session(payload)
+        print("CREATE SESSION STATUS:", res.status_code)
+&gt;       assert res.status_code in (200, 201), f"create session failed: {res.text[:300]}"
+E       AssertionError: create session failed: {"detail":"Not Found"}
+E       assert 404 in (200, 201)
+E        +  where 404 = &lt;Response [404]&gt;.status_code
+
+tests\api\test_recruitment.py:444: AssertionError</pre></div>
+            
+              <div class="test-row status-failed" data-status="failed" data-title="test_list_sessions">
+                <div class="test-info">
+                  <span class="test-badge fail">FAIL</span>
+                  <span class="test-title">test_list_sessions</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.22s</div>
+              </div>
+              <div class="error-log"><pre>self = &lt;tests.api.test_recruitment.TestRecruitmentCorporateSessions object at 0x000002384F760FA0&gt;
+admin_authorized_api = &lt;api.endpoints.auth_api.AuthAPI object at 0x00000238500F30D0&gt;
+
+    @allure.id(RecruitIDs.LIST_SESSIONS)
+    @pytest.mark.sanity
+    def test_list_sessions(self, admin_authorized_api):
+        """List all corporate sessions."""
+        api = admin_authorized_api.get_api(RecruitmentAPI)
+    
+        res = api.list_sessions()
+        print("LIST SESSIONS STATUS:", res.status_code)
+&gt;       assert res.status_code == 200, f"list sessions failed: {res.text[:300]}"
+E       AssertionError: list sessions failed: {"detail":"Not Found"}
+E       assert 404 == 200
+E        +  where 404 = &lt;Response [404]&gt;.status_code
+
+tests\api\test_recruitment.py:459: AssertionError</pre></div>
             
               </div>
             </details>
@@ -432,29 +1426,159 @@
                 <span class="badge badge-pass">100% Passed</span>
               </div>
               <div class="service-stats-summary">
-                <span class="stat-pill pass-pill">✅ 1 Passed</span>
+                <span class="stat-pill pass-pill">✅ 14 Passed</span>
                 <span class="stat-pill fail-pill">❌ 0 Failed</span>
                 
-                <span class="stat-pill duration-pill">⏱️ 0.4s</span>
+                <span class="stat-pill duration-pill">⏱️ 14.1s</span>
               </div>
             </div>
             
             <div class="progress-bar-container">
               <div class="progress-bar bar-pass" style="width: 100.0%;"></div>
             </div>
-            <div class="pass-rate-label">100.0% Pass Rate (1/1 tests)</div>
+            <div class="pass-rate-label">100.0% Pass Rate (14/14 tests)</div>
 
             <details class="test-details" open>
-              <summary>View Service Endpoints & Test Cases (1 total)</summary>
+              <summary>View Service Endpoints & Test Cases (14 total)</summary>
               <div class="test-list">
                 
-              <div class="test-row status-passed" data-status="passed" data-title="test_get_user_resumes_p0">
+              <div class="test-row status-passed" data-status="passed" data-title="test_upload_resume">
                 <div class="test-info">
                   <span class="test-badge pass">PASS</span>
-                  <span class="test-title">test_get_user_resumes_p0</span>
-                  <span class="marker-tag">p0</span><span class="marker-tag">api</span>
+                  <span class="test-title">test_upload_resume</span>
+                  <span class="marker-tag">api</span>
                 </div>
-                <div class="test-duration">⏱️ 0.41s</div>
+                <div class="test-duration">⏱️ 0.66s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_list_resumes">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_list_resumes</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.66s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_get_skills_from_a_specific_resume">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_get_skills_from_a_specific_resume</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.28s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_get_resume_by_id">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_get_resume_by_id</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.44s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_get_resume_analysis">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_get_resume_analysis</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.29s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_parse_resume">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_parse_resume</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.23s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_generate_resume">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_generate_resume</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 5.01s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_enhance_resume_builder_section_with_ai">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_enhance_resume_builder_section_with_ai</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 1.94s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_export_resume_pdf">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_export_resume_pdf</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.32s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_admin_fetch_all_resumes">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_admin_fetch_all_resumes</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 1.08s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_builder_parse">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_builder_parse</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.24s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_builder_generate">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_builder_generate</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 2.26s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_get_resume_analysis_new">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_get_resume_analysis_new</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.34s</div>
+              </div>
+              
+            
+              <div class="test-row status-passed" data-status="passed" data-title="test_get_resume_skills_new">
+                <div class="test-info">
+                  <span class="test-badge pass">PASS</span>
+                  <span class="test-title">test_get_resume_skills_new</span>
+                  <span class="marker-tag">api</span>
+                </div>
+                <div class="test-duration">⏱️ 0.31s</div>
               </div>
               
             
