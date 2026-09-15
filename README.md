@@ -1,32 +1,23 @@
-# 📊 AiNode QA — Live Test Reports Portal
+# 📊 AiNode QA — Unified Live Test Reports Portal
 
-This repository hosts the live **Test Execution Dashboards** and regression analytics for the **AiNode GUI Automation** suite.
-
-Reports are automatically generated and deployed here by the `Ainode_GUI` GitHub Actions CI/CD workflows.
+This repository serves as the central live **QA Test Reports Hub** for both **API Automation (Pytest + Allure)** and **Web GUI Automation (Playwright)**.
 
 ---
 
-## 🌐 Live Report Links
+## 🌐 Live Dashboard Links
 
-| Environment | Report View | Link |
-| :--- | :--- | :--- |
-| **Portal Home** | Main Portal Index | [Open Portal Dashboard](./index.html) |
-| **Staging (`gui_branch`)** | Service Test Dashboard & Failed Videos | [Open Staging Report](./playwright/) |
-| **Staging (`gui_branch`)** | Raw JSON Results Data | [View Results JSON](./playwright/data/results.json) |
-| **Production (`main`)** | Service Test Dashboard & Failed Videos | [Open Production Report](./playwright-prod/) |
-| **Production (`main`)** | Raw JSON Results Data | [View Results JSON](./playwright-prod/data/results.json) |
+| Report Category | Environment | Dashboard View | Live Link |
+| :--- | :--- | :--- | :--- |
+| **Portal Hub** | Multi-Env | Central QA Portal Index | [Open Portal Home](https://ankithr564.github.io/Ainode-QA-Reports/) |
+| **Backend API** | **Production** | Allure P0 Smoke Report | [Open Prod API Allure](https://ankithr564.github.io/Ainode-QA-Reports/pytest-prod/) |
+| **Backend API** | **Staging** | Allure Full Test Suite | [Open Staging API Allure](https://ankithr564.github.io/Ainode-QA-Reports/pytest/) |
+| **Web GUI** | **Production** | Playwright Web Report & Videos | [Open Prod GUI Dashboard](https://ankithr564.github.io/Ainode-QA-Reports/playwright-prod/) |
+| **Web GUI** | **Staging** | Playwright Web Report & Videos | [Open Staging GUI Dashboard](https://ankithr564.github.io/Ainode-QA-Reports/playwright/) |
 
 ---
 
 ## ✨ Features
 
-- **📦 Service-wise Breakdown**: Displays total passed, failed, skipped, and pass-rate % for all core services (`Classroom IDP`, `AI Interview`, `IDP Core`, `Career Advisor`, `Resume Builder`, `Schedule Assessment`, `Mentorship`, etc.).
-- **📹 Failed Test Video Recordings**: Automatically embeds Playwright `.webm` failure videos directly in the dashboard for instant debugging.
-- **⏱️ Execution Metrics**: Tracks execution duration per test case and service suite.
-- **⚡ Automated Deployment**: Updated automatically on every GitHub Actions test run via `peaceiris/actions-gh-pages`.
-
----
-
-## 🛠️ Repository Setup & Maintenance
-
-Refer to [SETUP_LIVE_REPORT_REPO.md](./SETUP_LIVE_REPORT_REPO.md) for full instructions on configuring GitHub Pages and linking this repository with the `Ainode_GUI` automation project.
+- **🚀 Backend API Analytics**: Interactive Allure reports generated directly from `test_prod.py` (97 P0 critical smoke tests across Auth, Billing, Courses, Interview, Jobs, Mentorship, Quiz, and Resumes).
+- **📹 GUI Failure Recordings**: Embedded Playwright `.webm` failure videos for web automation issues.
+- **⚡ Auto-Publishing**: Automatically published and updated via GitHub Actions after every pipeline execution.
