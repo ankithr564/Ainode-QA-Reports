@@ -1,0 +1,1 @@
+2026-09-16 09:19:16 | ERROR | ainode | pytest_runtest_logreport:78 | FAILED [setup]: tests/api/test_prod.py::TestProdJobsSmoke::test_prod_jobs_root_and_docs

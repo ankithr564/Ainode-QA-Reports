@@ -1,0 +1,1 @@
+2026-09-16 09:19:24 | ERROR | ainode | pytest_runtest_logreport:78 | FAILED [setup]: tests/api/test_prod.py::TestProdQuizSmoke::test_prod_quiz_assessment_questions

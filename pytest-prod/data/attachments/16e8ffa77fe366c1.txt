@@ -1,0 +1,2 @@
+WARNING  urllib3.connectionpool:connectionpool.py:874 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='api.ainode.in', port=443): Read timed out. (read timeout=100.0)")': /auth/login
+WARNING  urllib3.connectionpool:connectionpool.py:874 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='api.ainode.in', port=443): Read timed out. (read timeout=100.0)")': /auth/login

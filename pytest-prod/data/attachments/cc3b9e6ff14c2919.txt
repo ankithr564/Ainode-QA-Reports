@@ -1,0 +1,1 @@
+2026-09-16 09:14:04 | ERROR | ainode | pytest_runtest_logreport:78 | FAILED [setup]: tests/api/test_prod.py::TestProdAuthSmoke::test_prod_auth_me_profile
