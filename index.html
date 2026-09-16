@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AiNode Automation — QA Live Test Reports Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ── Light Theme Variables ─────────────────────────────────────── */
+    :root, [data-theme="light"] {
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --border-color: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent-color: #2563eb;
+      --success-color: #16a34a;
+      --purple-color: #7c3aed;
+      --btn-secondary-bg: #f1f5f9;
+      --btn-secondary-text: #334155;
+      --btn-secondary-hover: #e2e8f0;
+      --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.05);
+      --shadow-hover: 0 12px 28px rgba(37, 99, 235, 0.12);
+      --toggle-bg: #e2e8f0;
+      --toggle-text: #334155;
+      --tag-staging-bg: #dbeafe;
+      --tag-staging-border: #bfdbfe;
+      --tag-prod-bg: #dcfce7;
+      --tag-prod-border: #bbf7d0;
+      --tag-backend-bg: #f3e8ff;
+      --tag-backend-border: #e9d5ff;
+    }
+
+    /* ── Dark Theme Variables ──────────────────────────────────────── */
+    [data-theme="dark"] {
+      --bg-color: #0b0f19;
+      --card-bg: #111827;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-color: #3b82f6;
+      --success-color: #10b981;
+      --purple-color: #8b5cf6;
+      --btn-secondary-bg: rgba(255, 255, 255, 0.06);
+      --btn-secondary-text: #cbd5e1;
+      --btn-secondary-hover: rgba(255, 255, 255, 0.12);
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+      --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.6);
+      --toggle-bg: #1e293b;
+      --toggle-text: #f8fafc;
+      --tag-staging-bg: rgba(59, 130, 246, 0.15);
+      --tag-staging-border: rgba(59, 130, 246, 0.3);
+      --tag-prod-bg: rgba(16, 185, 129, 0.15);
+      --tag-prod-border: rgba(16, 185, 129, 0.3);
+      --tag-backend-bg: rgba(139, 92, 246, 0.15);
+      --tag-backend-border: rgba(139, 92, 246, 0.3);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease; }
+    
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 48px 20px;
+    }
+
+    .container {
+      max-width: 1040px;
+      width: 100%;
+    }
+
+    /* ── Top Bar & Theme Switcher ──────────────────────────────────── */
+    .top-nav {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 24px;
+    }
+    .theme-toggle-btn {
+      background-color: var(--toggle-bg);
+      color: var(--toggle-text);
+      border: 1px solid var(--border-color);
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      user-select: none;
+      box-shadow: var(--shadow-card);
+    }
+    .theme-toggle-btn:hover {
+      transform: scale(1.04);
+    }
+
+    /* ── Header ────────────────────────────────────────────────────── */
+    header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    h1 {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] h1 {
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ── 2x2 Grid ──────────────────────────────────────────────────── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .portal-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-card);
+      position: relative;
+    }
+    .portal-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-color);
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* ── Tags ──────────────────────────────────────────────────────── */
+    .card-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      display: inline-block;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+    .tag-staging { background: var(--tag-staging-bg); color: var(--accent-color); border: 1px solid var(--tag-staging-border); }
+    .tag-prod { background: var(--tag-prod-bg); color: var(--success-color); border: 1px solid var(--tag-prod-border); }
+    .tag-backend { background: var(--tag-backend-bg); color: var(--purple-color); border: 1px solid var(--tag-backend-border); }
+
+    .card-title {
+      font-size: 21px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+    .card-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    /* ── Buttons ───────────────────────────────────────────────────── */
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      text-decoration: none;
+      padding: 11px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 13.5px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary { background-color: var(--accent-color); color: #fff; }
+    .btn-primary:hover { opacity: 0.92; }
+    .btn-success { background-color: var(--success-color); color: #fff; }
+    .btn-success:hover { opacity: 0.92; }
+    .btn-purple { background-color: var(--purple-color); color: #fff; }
+    .btn-purple:hover { opacity: 0.92; }
+    .btn-secondary {
+      background-color: var(--btn-secondary-bg);
+      color: var(--btn-secondary-text);
+      border: 1px solid var(--border-color);
+    }
+    .btn-secondary:hover {
+      background-color: var(--btn-secondary-hover);
+    }
+
+    /* ── Footer ────────────────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border-color);
+      padding-top: 24px;
+    }
+
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
+      body { padding: 24px 16px; }
+      h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Top Theme Switcher -->
+    <div class="top-nav">
+      <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span id="themeIcon">🌙</span>
+        <span id="themeLabel">Dark Mode</span>
+      </button>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <h1>AiNode Automation — Test Reports Portal</h1>
+      <p class="subtitle">Live execution dashboards and test analytics for Web GUI and Backend API Automation</p>
+    </header>
+
+    <!-- 2x2 Grid -->
+    <div class="grid">
+      
+      <!-- 1. Backend API Staging -->
+      <div class="portal-card">
+        <div>
+          <span class="card-tag tag-backend">Backend API (Staging)</span>
+          <h2 class="card-title">Backend API Test Dashboard</h2>
+          <p class="card-desc">Executive API test status, endpoint pass/fail metrics, P0/P1 breakdown, and response duration analysis generated by Pytest on Staging.</p>
+        </div>
+        <div class="btn-group">
+          <a href="./pytest/" class="btn btn-purple">Open Backend Dashboard →</a>
+        </div>
+      </div>
+
+      <!-- 2. GUI Staging -->
+      <div class="portal-card">
+        <div>
+          <span class="card-tag tag-staging">GUI Web (Staging)</span>
+          <h2 class="card-title">GUI Web Test Dashboard (Staging)</h2>
+          <p class="card-desc">Comprehensive Playwright test status, pass/fail service breakdown, and failure video recordings for the <code>gui_branch</code> staging pipeline.</p>
+        </div>
+        <div class="btn-group">
+          <a href="./playwright/" class="btn btn-primary">Open GUI Dashboard →</a>
+          <a href="./playwright/data/results.json" class="btn btn-secondary">Raw JSON</a>
+        </div>
+      </div>
+
+      <!-- 3. GUI Production -->
+      <div class="portal-card">
+        <div>
+          <span class="card-tag tag-prod">GUI Web (Production)</span>
+          <h2 class="card-title">GUI Web Test Dashboard (Production)</h2>
+          <p class="card-desc">Nightly production smoke test results, service health metrics, and failure recordings for the <code>main</code> branch.</p>
+        </div>
+        <div class="btn-group">
+          <a href="./playwright-prod/" class="btn btn-success">Open Prod Dashboard →</a>
+          <a href="./playwright-prod/data/results.json" class="btn btn-secondary">Raw JSON</a>
+        </div>
+      </div>
+
+      <!-- 4. Backend API Production -->
+      <div class="portal-card">
+        <div>
+          <span class="card-tag tag-prod">Backend API (Production)</span>
+          <h2 class="card-title">Backend API Smoke Dashboard (Production)</h2>
+          <p class="card-desc">97 Critical P0 business smoke test metrics covering Auth, Billing, Courses, Interview, Jobs, Mentorship, Quiz, and Resumes in Production.</p>
+        </div>
+        <div class="btn-group">
+          <a href="./pytest-prod/" class="btn btn-success">Open Prod API Dashboard →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      AiNode Automation Framework • Deployed via GitHub Pages & GitHub Actions
+    </footer>
+  </div>
+
+  <!-- Theme Toggle Script with LocalStorage Persistence -->
+  <script>
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateToggleUI(currentTheme);
+
+    function toggleTheme() {
+      const activeTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateToggleUI(newTheme);
+    }
+
+    function updateToggleUI(theme) {
+      const icon = document.getElementById('themeIcon');
+      const label = document.getElementById('themeLabel');
+      if (theme === 'dark') {
+        icon.textContent = '☀️';
+        label.textContent = 'Light Mode';
+      } else {
+        icon.textContent = '🌙';
+        label.textContent = 'Dark Mode';
+      }
+    }
+  </script>
+</body>
+</html>
