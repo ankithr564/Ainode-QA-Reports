@@ -18,6 +18,7 @@
       --accent-color: #2563eb;
       --success-color: #16a34a;
       --purple-color: #7c3aed;
+      --amber-color: #d97706;
       --btn-secondary-bg: #f1f5f9;
       --btn-secondary-text: #334155;
       --btn-secondary-hover: #e2e8f0;
@@ -31,6 +32,8 @@
       --tag-prod-border: #bbf7d0;
       --tag-backend-bg: #f3e8ff;
       --tag-backend-border: #e9d5ff;
+      --tag-amber-bg: #fef3c7;
+      --tag-amber-border: #fde68a;
     }
 
     /* ── Dark Theme Variables ──────────────────────────────────────── */
@@ -43,6 +46,7 @@
       --accent-color: #3b82f6;
       --success-color: #10b981;
       --purple-color: #8b5cf6;
+      --amber-color: #f59e0b;
       --btn-secondary-bg: rgba(255, 255, 255, 0.06);
       --btn-secondary-text: #cbd5e1;
       --btn-secondary-hover: rgba(255, 255, 255, 0.12);
@@ -56,6 +60,8 @@
       --tag-prod-border: rgba(16, 185, 129, 0.3);
       --tag-backend-bg: rgba(139, 92, 246, 0.15);
       --tag-backend-border: rgba(139, 92, 246, 0.3);
+      --tag-amber-bg: rgba(245, 158, 11, 0.15);
+      --tag-amber-border: rgba(245, 158, 11, 0.3);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease; }
@@ -167,6 +173,7 @@
     .tag-staging { background: var(--tag-staging-bg); color: var(--accent-color); border: 1px solid var(--tag-staging-border); }
     .tag-prod { background: var(--tag-prod-bg); color: var(--success-color); border: 1px solid var(--tag-prod-border); }
     .tag-backend { background: var(--tag-backend-bg); color: var(--purple-color); border: 1px solid var(--tag-backend-border); }
+    .tag-amber { background: var(--tag-amber-bg); color: var(--amber-color); border: 1px solid var(--tag-amber-border); }
 
     .card-title {
       font-size: 21px;
@@ -205,6 +212,8 @@
     .btn-success:hover { opacity: 0.92; }
     .btn-purple { background-color: var(--purple-color); color: #fff; }
     .btn-purple:hover { opacity: 0.92; }
+    .btn-amber { background-color: var(--amber-color); color: #fff; }
+    .btn-amber:hover { opacity: 0.92; }
     .btn-secondary {
       background-color: var(--btn-secondary-bg);
       color: var(--btn-secondary-text);
@@ -244,7 +253,7 @@
     <!-- Header -->
     <header>
       <h1>AiNode Automation — Test Reports Portal</h1>
-      <p class="subtitle">Live execution dashboards and test analytics for Web GUI and Backend API Automation</p>
+      <p class="subtitle">Live execution dashboards, Allure test analytics, and Swagger drift reports for Web GUI and Backend API</p>
     </header>
 
     <!-- 2x2 Grid -->
@@ -259,6 +268,7 @@
         </div>
         <div class="btn-group">
           <a href="./pytest/" class="btn btn-purple">Open Backend Dashboard →</a>
+          <a href="./swagger/" class="btn btn-secondary">Swagger Drift Report</a>
         </div>
       </div>
 
@@ -297,6 +307,7 @@
         </div>
         <div class="btn-group">
           <a href="./pytest-prod/" class="btn btn-success">Open Prod API Dashboard →</a>
+          <a href="./swagger/coverage_report.html" class="btn btn-secondary">API Coverage</a>
         </div>
       </div>
 
