@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"f4eae39845d6461dc6baecc16d699405","name":"Production Smoke P0","statistic":{"failed":0,"broken":8,"skipped":0,"passed":0,"unknown":0,"total":8}}]}
+{"total":1,"items":[{"uid":"f4eae39845d6461dc6baecc16d699405","name":"Production Smoke P0","statistic":{"failed":1,"broken":0,"skipped":0,"passed":7,"unknown":0,"total":8}}]}
