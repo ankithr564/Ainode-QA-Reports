@@ -1,0 +1,3 @@
+2026-09-19 08:39:48 |  INFO | ainode | pytest_runtest_call:71 | START TEST: tests/api/test_prod.py::TestProdResumesSmoke::test_prod_resumes_list_my_resumes
+2026-09-19 08:39:48 |  INFO | ainode | pytest_runtest_call:73 | END TEST: tests/api/test_prod.py::TestProdResumesSmoke::test_prod_resumes_list_my_resumes
+2026-09-19 08:39:48 |  INFO | ainode | pytest_runtest_logreport:82 | PASSED [call]: tests/api/test_prod.py::TestProdResumesSmoke::test_prod_resumes_list_my_resumes

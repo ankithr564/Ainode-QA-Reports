@@ -1,0 +1,3 @@
+2026-09-19 08:38:41 |  INFO | ainode | pytest_runtest_call:71 | START TEST: tests/api/test_prod.py::TestProdBillingSmoke::test_prod_billing_my_subscription
+2026-09-19 08:38:42 |  INFO | ainode | pytest_runtest_call:73 | END TEST: tests/api/test_prod.py::TestProdBillingSmoke::test_prod_billing_my_subscription
+2026-09-19 08:38:42 |  INFO | ainode | pytest_runtest_logreport:82 | PASSED [call]: tests/api/test_prod.py::TestProdBillingSmoke::test_prod_billing_my_subscription
