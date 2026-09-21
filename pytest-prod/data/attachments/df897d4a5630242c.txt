@@ -1,0 +1,3 @@
+2026-09-21 09:44:24 |  INFO | ainode | pytest_runtest_call:71 | START TEST: tests/api/test_prod.py::TestProdJobsSmoke::test_prod_jobs_it_journey_recommendations
+2026-09-21 09:44:24 |  INFO | ainode | pytest_runtest_call:73 | END TEST: tests/api/test_prod.py::TestProdJobsSmoke::test_prod_jobs_it_journey_recommendations
+2026-09-21 09:44:24 |  INFO | ainode | pytest_runtest_logreport:82 | PASSED [call]: tests/api/test_prod.py::TestProdJobsSmoke::test_prod_jobs_it_journey_recommendations
