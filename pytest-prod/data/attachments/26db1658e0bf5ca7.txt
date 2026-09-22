@@ -1,0 +1,3 @@
+2026-09-22 09:08:21 |  INFO | ainode | pytest_runtest_call:71 | START TEST: tests/api/test_prod.py::TestProdInterviewSmoke::test_prod_interview_user_history
+2026-09-22 09:08:22 |  INFO | ainode | pytest_runtest_call:73 | END TEST: tests/api/test_prod.py::TestProdInterviewSmoke::test_prod_interview_user_history
+2026-09-22 09:08:22 |  INFO | ainode | pytest_runtest_logreport:82 | PASSED [call]: tests/api/test_prod.py::TestProdInterviewSmoke::test_prod_interview_user_history
