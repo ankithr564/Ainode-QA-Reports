@@ -1,0 +1,2 @@
+INFO     ainode:conftest.py:71 START TEST: tests/api/test_prod.py::TestProdQuizSmoke::test_prod_quiz_assessment_questions
+INFO     ainode:conftest.py:73 END TEST: tests/api/test_prod.py::TestProdQuizSmoke::test_prod_quiz_assessment_questions
