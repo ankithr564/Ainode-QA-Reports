@@ -1,0 +1,4 @@
+2026-09-27 09:54:30 |  INFO | ainode | pytest_runtest_call:71 | START TEST: tests/api/test_prod.py::TestProdResumesSmoke::test_prod_resumes_export_pdf
+2026-09-27 09:54:31 |  INFO | ainode | log_response:47 | RESPONSE DELETE https://api.ainode.in/resumes/api/v1/resumes/1232 | status=204 | time=372.6ms
+2026-09-27 09:54:32 |  INFO | ainode | pytest_runtest_call:73 | END TEST: tests/api/test_prod.py::TestProdResumesSmoke::test_prod_resumes_export_pdf
+2026-09-27 09:54:32 |  INFO | ainode | pytest_runtest_logreport:82 | PASSED [call]: tests/api/test_prod.py::TestProdResumesSmoke::test_prod_resumes_export_pdf
