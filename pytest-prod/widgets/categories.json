@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"743b228a85735a01d656aadbc5626c7d","name":"\uD83D\uDD0D Not Found (404)","statistic":{"failed":2,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":2}}]}
+{"total":2,"items":[{"uid":"743b228a85735a01d656aadbc5626c7d","name":"\uD83D\uDD0D Not Found (404)","statistic":{"failed":2,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":2}},{"uid":"ed2e143924c095c7b8cad52bcad2c9be","name":"\uD83D\uDFE1 4xx — Other Client Errors","statistic":{"failed":2,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":2}}]}
