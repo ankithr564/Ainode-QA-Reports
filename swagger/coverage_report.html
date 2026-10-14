@@ -507,28 +507,28 @@
     <div class="stats-grid">
       <div class="stat-card">
         <div class="stat-label">Total API Routes</div>
-        <div class="stat-value" id="stat-total-ep">536</div>
+        <div class="stat-value" id="stat-total-ep">541</div>
         <div class="stat-subtext">Across all services</div>
       </div>
       <div class="stat-card">
         <div class="stat-label">P0 Coverage</div>
         <div class="stat-value" style="color: var(--success);" id="stat-p0-val">461</div>
-        <div class="stat-subtext"><span id="stat-p0-pct">86.0</span>% covered by happy-path tests</div>
+        <div class="stat-subtext"><span id="stat-p0-pct">85.2</span>% covered by happy-path tests</div>
         <div class="progress-track">
-          <div class="progress-bar" style="width: 86.00746268656717%; background: var(--success);" id="stat-p0-bar"></div>
+          <div class="progress-bar" style="width: 85.21256931608133%; background: var(--success);" id="stat-p0-bar"></div>
         </div>
       </div>
       <div class="stat-card">
         <div class="stat-label">P1 Coverage</div>
         <div class="stat-value" style="color: var(--primary);" id="stat-p1-val">359</div>
-        <div class="stat-subtext"><span id="stat-p1-pct">67.0</span>% covered by negative/boundary tests</div>
+        <div class="stat-subtext"><span id="stat-p1-pct">66.4</span>% covered by negative/boundary tests</div>
         <div class="progress-track">
-          <div class="progress-bar" style="width: 66.97761194029852%; background: var(--primary);" id="stat-p1-bar"></div>
+          <div class="progress-bar" style="width: 66.35859519408503%; background: var(--primary);" id="stat-p1-bar"></div>
         </div>
       </div>
       <div class="stat-card">
         <div class="stat-label">Automation Gap</div>
-        <div class="stat-value" style="color: var(--warning);" id="stat-gap-val">75</div>
+        <div class="stat-value" style="color: var(--warning);" id="stat-gap-val">80</div>
         <div class="stat-subtext">Endpoints lacking P0 coverage</div>
       </div>
     </div>
@@ -829,6 +829,43 @@
           "p0_tests": [
             "TestAuthOther.test_verify_email"
           ],
+          "p1_tests": []
+        }
+      ],
+      "superadmin-analytics": [
+        {
+          "method": "GET",
+          "path": "/admin/analytics/features",
+          "sdk_method": "[UNIMPLEMENTED]",
+          "p0_tests": [],
+          "p1_tests": []
+        },
+        {
+          "method": "GET",
+          "path": "/admin/analytics/overview",
+          "sdk_method": "[UNIMPLEMENTED]",
+          "p0_tests": [],
+          "p1_tests": []
+        },
+        {
+          "method": "GET",
+          "path": "/admin/analytics/timeseries",
+          "sdk_method": "[UNIMPLEMENTED]",
+          "p0_tests": [],
+          "p1_tests": []
+        },
+        {
+          "method": "GET",
+          "path": "/admin/analytics/universities",
+          "sdk_method": "[UNIMPLEMENTED]",
+          "p0_tests": [],
+          "p1_tests": []
+        },
+        {
+          "method": "GET",
+          "path": "/admin/analytics/users",
+          "sdk_method": "[UNIMPLEMENTED]",
+          "p0_tests": [],
           "p1_tests": []
         }
       ],
