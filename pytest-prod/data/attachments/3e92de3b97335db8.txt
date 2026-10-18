@@ -1,0 +1,2 @@
+INFO     ainode:conftest.py:71 START TEST: tests/api/test_prod.py::TestProdAuthSmoke::test_prod_auth_get_role_details
+INFO     ainode:conftest.py:73 END TEST: tests/api/test_prod.py::TestProdAuthSmoke::test_prod_auth_get_role_details

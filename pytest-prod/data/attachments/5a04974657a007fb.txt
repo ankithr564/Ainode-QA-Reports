@@ -1,0 +1,2 @@
+INFO     ainode:conftest.py:71 START TEST: tests/api/test_prod.py::TestProdCoursesSmoke::test_prod_courses_daily_active_users
+INFO     ainode:conftest.py:73 END TEST: tests/api/test_prod.py::TestProdCoursesSmoke::test_prod_courses_daily_active_users
