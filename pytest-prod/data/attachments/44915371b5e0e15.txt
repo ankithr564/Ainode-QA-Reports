@@ -1,0 +1,7 @@
+=== Failed Request Details ===
+Error Class  : 4xx Client Error
+Status Code  : 402
+URL          : https://api.ainode.in/quiz/v1/analyze_performance_gaps
+
+--- Response Preview ---
+{"detail":"Insufficient credits"}
