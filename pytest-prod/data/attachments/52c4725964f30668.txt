@@ -1,0 +1,2 @@
+INFO     ainode:conftest.py:71 START TEST: tests/api/test_prod.py::TestProdMentorshipSmoke::test_prod_mentorship_get_mentor_profile
+INFO     ainode:conftest.py:73 END TEST: tests/api/test_prod.py::TestProdMentorshipSmoke::test_prod_mentorship_get_mentor_profile
