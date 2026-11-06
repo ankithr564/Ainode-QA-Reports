@@ -1,0 +1,2 @@
+INFO     ainode:conftest.py:71 START TEST: tests/api/test_prod.py::TestProdCoursesSmoke::test_prod_courses_average_completion_rates
+INFO     ainode:conftest.py:73 END TEST: tests/api/test_prod.py::TestProdCoursesSmoke::test_prod_courses_average_completion_rates
