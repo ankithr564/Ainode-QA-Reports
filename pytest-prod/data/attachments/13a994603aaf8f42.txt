@@ -1,0 +1,2 @@
+INFO     ainode:conftest.py:71 START TEST: tests/api/test_prod.py::TestProdInterviewSmoke::test_prod_interview_health
+INFO     ainode:conftest.py:73 END TEST: tests/api/test_prod.py::TestProdInterviewSmoke::test_prod_interview_health
