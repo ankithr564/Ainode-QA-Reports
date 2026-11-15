@@ -1,0 +1,7 @@
+=== Failed Request Details ===
+Error Class  : 4xx Client Error
+Status Code  : 422
+URL          : https://api.ainode.in/courses/api/v1/courses/1/content
+
+--- Response Preview ---
+{"detail":[{"type":"uuid_parsing","loc":["path","course_id"],"msg":"Input should be a valid UUID, invalid length: expected length 32 for simple format, found 1","input":"1","ctx":{"error":"invalid len
