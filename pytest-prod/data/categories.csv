@@ -1,2 +1,3 @@
 "BROKEN","CATEGORY","FAILED","PASSED","SKIPPED","UNKNOWN"
 "0","🟡 4xx — Other Client Errors","4","0","0","0"
+"0","🔴 5xx — Other Server Errors","1","0","0","0"

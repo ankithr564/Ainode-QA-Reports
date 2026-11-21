@@ -1,0 +1,10 @@
+=== Failed Request Details ===
+Error Class  : 5xx Server Error
+Status Code  : 522
+URL          : https://api.ainode.in/resumes/api/v1/resumes/admin/fetch-all
+
+--- Response Preview ---
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-
