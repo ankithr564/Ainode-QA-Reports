@@ -1,0 +1,2 @@
+INFO     ainode:conftest.py:71 START TEST: tests/api/test_prod.py::TestProdJobsSmoke::test_prod_jobs_get_company
+INFO     ainode:conftest.py:73 END TEST: tests/api/test_prod.py::TestProdJobsSmoke::test_prod_jobs_get_company
